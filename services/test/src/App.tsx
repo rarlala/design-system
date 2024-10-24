@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { vars } from "@rarla/themes";
+import { vars, classes } from "@rarla/themes";
 import styled from "@emotion/styled";
 
 function App() {
@@ -30,5 +30,6 @@ const View = () => (
 );
 
 const Text = styled.div`
+  ${classes.typography.heading["4xl"]}
   color: ${vars.colors.$static.light.red[900]};
 `;
