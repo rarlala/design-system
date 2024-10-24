@@ -13,11 +13,28 @@ const generateThemeCssVariables = () => {
 
   Object.entries(theme.vars).forEach(([key, value]) => {
     if (key === "colors") {
-      console.log(key, "colors");
       Object.entries(value.$static).forEach(([colorKey, colorValue]) => {
-        console.log(colorKey);
         if (colorKey === "light") {
           const selector = ":root";
+
+          const cssVariables = Object.entries(colorValue)
+            .map(([mainKey, mainValue]) =>
+              Object.entries(mainValue)
+                .map(
+                  ([subKey, subValue]) =>
+                    `--${toCssCasting(mainKey)}-${toCssCasting(
+                      subKey
+                    )}: ${subValue};`
+                )
+                .join("\n")
+            )
+            .join("\n");
+
+          cssString.push(`${selector} {\n${cssVariables}\n}`);
+        }
+
+        if (colorKey === "dark") {
+          const selector = ":root .theme-dark";
 
           const cssVariables = Object.entries(colorValue)
             .map(([mainKey, mainValue]) =>
@@ -43,7 +60,6 @@ const generateThemeCssVariables = () => {
 
 const generateThemeCss = () => {
   const variables = generateThemeCssVariables();
-  console.log(variables);
 
   fs.writeFileSync("dist/themes.css", [...variables].join("\n"));
 };
