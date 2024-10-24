@@ -31,5 +31,7 @@ const View = () => (
 
 const Text = styled.div`
   ${classes.typography.heading["4xl"]}
+  border-radius: ${vars.box.radius.base};
   color: ${vars.colors.$static.light.red[900]};
+  border: 1px solid red;
 `;
