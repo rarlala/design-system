@@ -1,0 +1,9 @@
+{
+  "extends": "nx/presets/npm.json",
+  "defaultBase": "main",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  }
+}
