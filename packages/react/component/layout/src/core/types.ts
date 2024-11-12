@@ -14,4 +14,4 @@ export type ColorProps = {
   background: keyof typeof vars.colors.$scale & string;
 };
 
-export type StyleProps = Parameters<typeof StyleSprinkles>;
+export type StyleProps = Parameters<typeof StyleSprinkles>[0] & ColorProps;
