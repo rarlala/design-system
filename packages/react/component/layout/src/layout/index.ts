@@ -1,5 +1,5 @@
-export { Box } from "./Box";
-export type { BoxProps } from "./types";
+export type { BoxProps, DividerProps, FlexProps } from "./types";
 
+export { Box } from "./Box";
 export { Divider } from "./Divider";
-export type { DividerProps } from "./types";
+export { Flex } from "./Flex";
