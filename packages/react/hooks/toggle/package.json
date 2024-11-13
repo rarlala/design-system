@@ -1,5 +1,5 @@
 {
-  "name": "@rarla/react-hooks-button",
+  "name": "@rarla/react-hooks-toggle",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
@@ -29,7 +29,6 @@
     "react": "*"
   },
   "dependencies": {
-    "@rarla/react-hooks-toggle": "workspace:^",
     "clsx": "^2.1.1"
   }
 }

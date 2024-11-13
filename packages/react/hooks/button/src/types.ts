@@ -28,3 +28,30 @@ export type OverloadedButtonFunction = {
   (props: BaseButtonProps<"span">): UseButtonReturn<"span">;
   (props: BaseButtonProps<"input">): UseButtonReturn<"input">;
 };
+
+export type UseToggleButtonReturn<T> = UseButtonReturn<T> & {
+  isSelected: boolean;
+};
+
+export type OverloadedToggleButtonFunction = {
+  (
+    props: BaseButtonProps<"button">,
+    isSelected?: boolean,
+  ): UseToggleButtonReturn<"button">;
+  (
+    props: BaseButtonProps<"a">,
+    isSelected?: boolean,
+  ): UseToggleButtonReturn<"a">;
+  (
+    props: BaseButtonProps<"div">,
+    isSelected?: boolean,
+  ): UseToggleButtonReturn<"div">;
+  (
+    props: BaseButtonProps<"span">,
+    isSelected?: boolean,
+  ): UseToggleButtonReturn<"span">;
+  (
+    props: BaseButtonProps<"input">,
+    isSelected?: boolean,
+  ): UseToggleButtonReturn<"input">;
+};
