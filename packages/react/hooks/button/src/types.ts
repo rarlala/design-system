@@ -22,11 +22,11 @@ export type UseButtonReturn<T> = {
 };
 
 export type OverloadedButtonFunction = {
-  (props: BaseButtonProps<"button">): UseButtonReturn<"button">;
-  (props: BaseButtonProps<"a">): UseButtonReturn<"a">;
-  (props: BaseButtonProps<"div">): UseButtonReturn<"div">;
-  (props: BaseButtonProps<"span">): UseButtonReturn<"span">;
-  (props: BaseButtonProps<"input">): UseButtonReturn<"input">;
+  (props: BaseButtonProps<"button">): UseButtonReturn<HTMLButtonElement>;
+  (props: BaseButtonProps<"a">): UseButtonReturn<HTMLAnchorElement>;
+  (props: BaseButtonProps<"div">): UseButtonReturn<HTMLDivElement>;
+  (props: BaseButtonProps<"input">): UseButtonReturn<HTMLInputElement>;
+  (props: BaseButtonProps<"span">): UseButtonReturn<HTMLSpanElement>;
 };
 
 export type UseToggleButtonReturn<T> = UseButtonReturn<T> & {
@@ -37,21 +37,21 @@ export type OverloadedToggleButtonFunction = {
   (
     props: BaseButtonProps<"button">,
     isSelected?: boolean,
-  ): UseToggleButtonReturn<"button">;
+  ): UseToggleButtonReturn<HTMLButtonElement>;
   (
     props: BaseButtonProps<"a">,
     isSelected?: boolean,
-  ): UseToggleButtonReturn<"a">;
+  ): UseToggleButtonReturn<HTMLAnchorElement>;
   (
     props: BaseButtonProps<"div">,
     isSelected?: boolean,
-  ): UseToggleButtonReturn<"div">;
-  (
-    props: BaseButtonProps<"span">,
-    isSelected?: boolean,
-  ): UseToggleButtonReturn<"span">;
+  ): UseToggleButtonReturn<HTMLDivElement>;
   (
     props: BaseButtonProps<"input">,
     isSelected?: boolean,
-  ): UseToggleButtonReturn<"input">;
+  ): UseToggleButtonReturn<HTMLInputElement>;
+  (
+    props: BaseButtonProps<"span">,
+    isSelected?: boolean,
+  ): UseToggleButtonReturn<HTMLSpanElement>;
 };
