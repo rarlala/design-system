@@ -9,6 +9,14 @@ Chakra UI 및 Storybook과 같은 실제 사례를 참고하여, 패키지와 �
 
 <br />
 
+## 프로젝트 실행 방법
+- root path에서 아래 명령어를 터미널에 입력하면 storybook이 실행됩니다.
+```
+yarn && yarn dev:all
+```
+
+<br />
+
 ## 주요 목표
 - 디자인 시스템 구축 경험을 통한 UI 컴포넌트 설계 및 확장성 높은 구조 학습
 - CSS Variable을 활용한 효율적이고 일관된 스타일 관리
@@ -58,10 +66,17 @@ React, vanila-extract, esbuild, Vitest, Storybook
 
 ```
 - packages
-  각종 패키지를 모아놓은 폴더로, 디자인 시스템, UI 컴포넌트, React 훅, 테마 관련 파일들이 포함됩니다.
-  dist: 빌드된 결과물이 저장되는 디렉터리
-  src: 원본 소스 코드가 저장되는 디렉터리
+  - 각종 패키지를 모아놓은 폴더로, 디자인 시스템, UI 컴포넌트, React 훅, 테마 관련 파일들이 포함됩니다.
+  - dist: 빌드된 결과물이 저장되는 디렉터리
+  - src: 원본 소스 코드가 저장되는 디렉터리
 - services
-  Storybook과 같은 서비스 관련 파일들을 관리합니다.
-  stories: 컴포넌트별 시각적 문서를 위한 스토리 파일 저장
+  - Storybook과 같은 서비스 관련 파일들을 관리합니다.
+  - stories: 컴포넌트별 시각적 문서를 위한 스토리 파일 저장
 
+<br />
+
+## 프로젝트 실행 방법
+- root path에서 아래 명령어를 터미널에 입력하면 storybook이 실행됩니다.
+```
+yarn && yarn dev:all
+```
